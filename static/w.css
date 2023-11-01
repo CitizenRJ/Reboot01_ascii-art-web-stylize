@@ -1,0 +1,52 @@
+body {
+    background: linear-gradient(90deg, rgba(250, 128, 112, 1) 0%, rgba(248, 180, 160, 1) 25%, rgba(246, 218, 195, 1) 50%, rgba(245, 245, 220, 1) 75%);
+}
+
+.font {
+    text-align: center;
+}
+
+.cent {
+    text-align: center;
+}
+
+.cen {
+    position: relative;
+    height: 200px;
+    margin: 0 auto
+}
+
+#name {
+    width: 600px;
+    font-size: 200%;
+}
+
+.opcen {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.menuc {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.b {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.box1 {
+    text-align: center;
+    width: auto;
+    min-width: 600px;
+    height: 150px;
+    border: 1px solid black;
+    margin: 0 auto;
+    padding-top: 1%;
+}
+
+footer {
+    text-align: center;
+    padding-top: 300px;
+}
