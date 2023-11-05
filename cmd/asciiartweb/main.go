@@ -12,8 +12,8 @@ import (
 )
 
 type Fonts struct {
-	Art                string
-	Hidden             string
+	Art    string
+	Hidden string
 }
 
 const port = ":8080"
@@ -74,7 +74,7 @@ func formHandler(w http.ResponseWriter, r *http.Request) {
 			}
 			return
 		}
-		
+
 		banner := r.FormValue("banner")
 		if banner != "shadow" && banner != "standard" && banner != "thinkertoy" {
 			w.WriteHeader(http.StatusNotFound)

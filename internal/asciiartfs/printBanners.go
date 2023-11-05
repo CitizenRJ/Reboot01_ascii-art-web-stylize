@@ -1,32 +1,29 @@
 package asciiartfs
 
-import "fmt"
+import "strings"
 
 // Print the full outcome
 func PrintBanners(banners, arr []string) string {
-	art := ""
-	num := 0
-	for _, ch := range banners {
-		num = num + 1
+	var lines []string
+
+	for i, ch := range banners {
+		if i != 0 && ch != "" && banners[i-1] != "" {
+			lines = append(lines, "")
+		}
 		if ch == "" {
-			if num < len(banners) {
-				fmt.Println()
-				continue
-			} else {
-				continue
-			}
+			continue
 		}
-		for i := 0; i < 8; i++ {
-			for _, j := range ch {
-				n := (j-32)*9 + 1
-				art += arr[int(n)+i]
 
+		for j := 0; j < 8; j++ {
+			var line strings.Builder
+			for _, char := range ch {
+				n := (int(char)-32)*9 + j
+				if n >= 0 && n < len(arr) {
+					line.WriteString(arr[n])
+				}
 			}
-			art += "\n"
-
+			lines = append(lines, line.String())
 		}
-		art += "\n"
-
 	}
-	return art
+	return strings.Join(lines, "\n")
 }
